@@ -176,6 +176,40 @@ body {
     position: absolute;
 }
 
+.dis-none {
+    display: none;
+}
+
+.anime-up {
+    animation: upTransitionAnime 0.7s forwards;
+}
+
+@keyframes upTransitionAnime {
+    from {
+        opacity: 1;
+        top: 0;
+    }
+    to {
+        opacity: 0;
+        top: -120px;
+    }
+}
+
+.anime-down {
+    animation: downTransitionAnime 0.7s forwards;
+}
+
+@keyframes downTransitionAnime {
+    from {
+        opacity: 0;
+        top: -120px;
+    }
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+
 .align-justify {
     text-align: justify;
 }
@@ -289,6 +323,10 @@ img {vertical-align: middle;}
 
 
 /* ___________________ */
+
+.pointer:hover {
+    cursor: pointer;
+}
 
 .event-card {
     max-width: 300px;

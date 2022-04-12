@@ -11,6 +11,47 @@
     <title>Cultivator Begins | NGO</title>
 </head>
 <body>
+    <div id="header" class=" flex-layout justify-space-between box-shadow items-center width-100 " style="background: var(--white-color); top: -120px; left: 0; z-index: 10; padding: 20px 40px; position: fixed;">
+        <img class=" width-100 " src="./assets/cultivator-begins-logo.jpeg" alt="NGO Logo" style="max-width: 200px;">
+        <div class=" flex-layout dis-none-res items-center justify-center col-gap-20 ">
+            <div class="pointer" onclick="scrollSpecific('home')">
+                <h4>Home</h4>
+            </div>
+            <div class="pointer" onclick="scrollSpecific('tradition')">
+                <h4>Our Tradition</h4>
+            </div>
+            <div class="pointer" onclick="scrollSpecific('mission')">
+                <h4>Mission</h4>
+            </div>
+            <div class="pointer" onclick="scrollSpecific('vision')">
+                <h4>Vision</h4>
+            </div>
+            <div class="pointer" onclick="scrollSpecific('events')">
+                <h4>Drives</h4>
+            </div>
+            <div class="pointer" onclick="scrollSpecific('footer')">
+                <span class="iconify" data-icon="carbon:phone-filled" style="width: 30px; height: 30px;"></span>
+            </div>
+            <!-- <a href="#home">
+                <h4>Home</h4>
+            </a>
+            <a href="#tradition">
+                <h4>Our Tradition</h4>
+            </a> -->
+            <!-- <a href="#mission">
+                <h4>Mission</h4>
+            </a>
+            <a href="#vision">
+                <h4>Vision</h4>
+            </a>
+            <a href="#events">
+                <h4>Drives</h4>
+            </a>
+            <a href="#contact">
+                <span class="iconify" data-icon="carbon:phone-filled" style="width: 30px; height: 30px;"></span>
+            </a> -->
+        </div>
+    </div>
     <div id="home" class=" flex-layout flex-dir-col-res-600 width-100 items-center justify-space-between " style="border-bottom: 1px solid lightgray; padding-bottom: 20px;">
         <div class=" dis-none-res-600 ">
             <h3 class=" bold-text grey-color ">Follow Us</h3>
@@ -38,10 +79,28 @@
             </a>
         </div>
     </div>
-    <div class=" flex-layout justify-space-between items-center padding-20 ">
+    <div id="home-sec" class=" flex-layout justify-space-between items-center padding-20 ">
         <img src="./assets/cultivator-begins-logo.jpeg" alt="NGO Logo" style="max-width: 300px; width: 100%;">
         <div class=" flex-layout dis-none-res items-center justify-center col-gap-20 ">
-            <a href="#home">
+            <div class="pointer" onclick="scrollSpecific('home')">
+                <h4>Home</h4>
+            </div>
+            <div class="pointer" onclick="scrollSpecific('tradition')">
+                <h4>Our Tradition</h4>
+            </div>
+            <div class="pointer" onclick="scrollSpecific('mission')">
+                <h4>Mission</h4>
+            </div>
+            <div class="pointer" onclick="scrollSpecific('vision')">
+                <h4>Vision</h4>
+            </div>
+            <div class="pointer" onclick="scrollSpecific('events')">
+                <h4>Drives</h4>
+            </div>
+            <div class="pointer" onclick="scrollSpecific('footer')">
+                <span class="iconify" data-icon="carbon:phone-filled" style="width: 30px; height: 30px;"></span>
+            </div>
+            <!-- <a href="#home">
                 <h4>Home</h4>
             </a>
             <a href="#tradition">
@@ -58,10 +117,10 @@
             </a>
             <a href="#contact">
                 <span class="iconify" data-icon="carbon:phone-filled" style="width: 30px; height: 30px;"></span>
-            </a>
+            </a> -->
         </div>
     </div>
-    <div class=" width-100 ">
+    <div id="slider" class=" width-100 ">
         <div class="slideshow-container width-100">
             <div class="mySlides fade">
               <img src="./assets/banner-1.jpg" style="max-width:100%">
@@ -181,7 +240,7 @@
             </div>
         </div>
     </div>
-    <div id="contact" class=" flex-layout flex-dir-col-res justify-center padding-40 row-gap-40 width-100 " style="column-gap: 80px;">
+    <div id="footer" class=" flex-layout flex-dir-col-res justify-center padding-40 row-gap-40 width-100 " style="column-gap: 80px;">
         <div style="flex: 0 0 27%;">
             <h3 class=" bold-text grey-color ">About Us</h3>
             <h5 class=" align-justify margin-top-20 ">
@@ -222,8 +281,8 @@
             <h4>abc@gmail.com</h4>
         </div>
     </div>
-    <div class=" flex-layout flex-dir-rev-col-res justify-space-between items-center row-gap-10 ">
-        <h4 class=" align-center ">2015 &#169; All Rights Reserved | Designed and developed by HalfByte Cloud Services</h4>
+    <div id="footer-sec" class=" flex-layout flex-dir-rev-col-res justify-space-between items-center row-gap-10 ">
+        <h4 class=" align-center ">2022 &#169; All Rights Reserved | Developed by HalfByte Cloud Services</h4>
         <div class=" follow-us-links flex-layout items-center justify-center col-gap-20 margin-top-10 ">
             <a>
                 <span class="iconify" data-icon="fa:facebook-square" style="width: 30px; height: 30px;"></span>
@@ -260,6 +319,53 @@
           slides[slideIndex-1].style.display = "block";  
           dots[slideIndex-1].className += " active";
           setTimeout(showSlides, 3000);
+        }
+    </script>
+    <script>
+        let home = document.querySelector('#home');
+        let homeSec = document.querySelector('#home-sec');
+        let slider = document.querySelector('#slider');
+        let tradition = document.querySelector("#tradition");
+        let mission = document.querySelector('#mission');
+        let vision = document.querySelector('#vision');
+        let events = document.querySelector('#events');
+        let footer = 330;
+        let footerSec = document.querySelector('#footer-sec');
+
+        var homeH = home.offsetHeight;
+        // var sliderH = homeH + slider.offsetHeight;
+        var traditionH = homeH + tradition.offsetHeight + 230;
+        var missionH = traditionH + mission.offsetHeight + 10;
+        var visionH = missionH + vision.offsetHeight + 30;
+        var eventsH = visionH + events.offsetHeight - 300;
+        var footerH = eventsH + footer + 100;
+        var footerSecH = footerH + footerSec.offsetHeight;
+
+        function scrollSpecific(id) {
+            if (id == 'home') {
+                window.scrollTo(0, (homeH - 50));
+            } else if ( id == 'tradition') {
+                window.scrollTo(0, traditionH);
+            } else if ( id == 'mission') {
+                window.scrollTo(0, missionH);
+            } else if ( id == 'vision'){
+                window.scrollTo(0, visionH);
+            } else if ( id == 'events') {
+                window.scrollTo(0, eventsH);
+            } else if ( id == 'footer') {
+                window.scrollTo(0, footerH);
+            }
+        }
+
+        window.addEventListener('scroll', headerPop);
+        function headerPop() {
+            if (window.pageYOffset > 200) {
+                document.getElementById("header").classList.remove("anime-up");
+                document.getElementById("header").classList.add("anime-down");
+            } else {
+                document.getElementById("header").classList.remove("anime-down")
+                document.getElementById("header").classList.add("anime-up")
+            }
         }
     </script>        
 </body>
