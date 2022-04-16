@@ -15,7 +15,8 @@
 <body>
     <div id="header" class=" width-100 " style="top: -150px; left: 0; position: fixed; z-index: 10;">
         <div id="header-child" class=" flex-layout justify-space-between box-shadow items-center " style="background: var(--white-color); padding: 20px 40px; z-index: 15;">
-            <img class=" width-100 margin-top-10 margin-bottom-10 " src="./assets/cultivator-begins-logo.jpeg" alt="NGO Logo" style="max-width: 200px;">
+            <img class=" width-100 dis-none-res-600 margin-top-10 margin-bottom-10 " src="./assets/cultivator-begins-logo.jpeg" alt="NGO Logo" style="max-width: 200px;">
+            <img class=" width-100 dis-none dis-block-res-600 margin-top-10 margin-bottom-10 " src="./assets/cultivator-begins-logo-res.jpeg" alt="NGO Logo" style="max-width: 60px;">
             <div class=" flex-layout dis-none-res items-center justify-center col-gap-20 ">
                 <div class="pointer" onclick="scrollSpecific('home')">
                     <h4>Home</h4>
@@ -36,10 +37,10 @@
                     <span class="iconify" data-icon="carbon:phone-filled" style="width: 30px; height: 30px;"></span>
                 </div>
             </div>
-            <div class=" container dis-none flex-layout-res ">
+            <!-- <div onclick="navbarTrigger()" class=" container dis-none flex-layout-res ">
                 <input type="checkbox" id="checkbox4" class="checkbox4 visuallyHidden">
                 <label for="checkbox4">
-                    <div onclick="navbarTrigger()" class="hamburger hamburger4">
+                    <div class="hamburger hamburger4">
                         <span class="bar bar1"></span>
                         <span class="bar bar2"></span>
                         <span class="bar bar3"></span>
@@ -47,25 +48,32 @@
                         <span class="bar bar5"></span>
                     </div>
                 </label>
-            </div>
+            </div> -->
+            <button id="hamburger" class="menu dis-none flex-layout-res " onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened')); navbarTrigger();" aria-label="Main Menu">
+                <svg width="65" height="65" viewBox="0 0 100 100">
+                  <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                  <path class="line line2" d="M 20,50 H 80" />
+                  <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                </svg>
+              </button>
         </div>
         <div id="navbar" class=" posi-abs padding-40 flex-layout flex-dir-col width-100 items-center row-gap-20 box-shadow " style="top: -200px; left: 0; background: var(--white-color); z-index: -1;">
-            <div class="pointer" onclick="scrollSpecific('home'); navbarTrigger();">
+            <div class="pointer" onclick="scrollSpecific('home'); hamburgerClick();">
                 <h4>Home</h4>
             </div>
-            <div class="pointer" onclick="scrollSpecific('tradition'); navbarTrigger();">
+            <div class="pointer" onclick="scrollSpecific('tradition'); hamburgerClick();">
                 <h4>Our Tradition</h4>
             </div>
-            <div class="pointer" onclick="scrollSpecific('mission'); navbarTrigger();">
+            <div class="pointer" onclick="scrollSpecific('mission'); hamburgerClick();">
                 <h4>Mission</h4>
             </div>
-            <div class="pointer" onclick="scrollSpecific('vision'); navbarTrigger();">
+            <div class="pointer" onclick="scrollSpecific('vision'); hamburgerClick();">
                 <h4>Vision</h4>
             </div>
-            <div class="pointer" onclick="scrollSpecific('events'); navbarTrigger();">
+            <div class="pointer" onclick="scrollSpecific('events'); hamburgerClick();">
                 <h4>Drives</h4>
             </div>
-            <div class="pointer" onclick="scrollSpecific('footer'); navbarTrigger();">
+            <div class="pointer" onclick="scrollSpecific('footer'); hamburgerClick();">
                 <h4>Contact Us</h4>
             </div>
         </div>
@@ -212,7 +220,7 @@
                 </div>
                 <div id="drive1" class=" flex-layout dis-none items-center justify-center width-100 " style="position: fixed; height: 100vh; background: rgba(0, 0, 0, 0.5); top: 0; left: 0;">
                     <div class=" padding-40 flex-layout flex-dir-col pop-up-con ">
-                        <div class=" flex-layout items-center justify-space-between width-100 " style="border-bottom: 1px solid lightgray; padding-bottom: 20px; position: sticky; top: 0; left: 0; background: var(--white-color);">
+                        <div class=" flex-layout items-center justify-space-between width-100 " style="border-bottom: 1px solid lightgray; padding: 20px 0; position: sticky; top: 0; left: 0; background: var(--white-color);">
                             <h3 class=" bold-text green-color ">Plantation Drive</h3>
                             <div class=" pointer " onclick="popUpClose('drive1')">
                                 <span class="iconify" data-icon="akar-icons:cross" data-width="25" data-height="25"></span>

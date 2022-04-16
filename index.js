@@ -50,11 +50,16 @@ function navbarTrigger() {
         document.getElementById("navbar").classList.remove('navbar-anime-up');
         flag = false;
     } else {
-        document.getElementById("checkbox4").click();
         document.getElementById("navbar").classList.add('navbar-anime-up');
         document.getElementById("navbar").classList.remove('navbar-anime-down');
         flag = true;
     }
+}
+
+function hamburgerClick() {
+    document.getElementById("hamburger").classList.toggle('opened');
+    document.getElementById("hamburger").setAttribute('aria-expanded', document.getElementById("hamburger").classList.contains('opened'));
+    navbarTrigger();
 }
 
 window.addEventListener('scroll', headerPop);
