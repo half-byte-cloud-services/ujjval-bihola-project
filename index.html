@@ -8,48 +8,66 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./index.css">
+    <!-- Link to the file hosted on your server, -->
+    <link rel="stylesheet" href="./splide/splide-4.0.1/dist/css/splide.min.css">
     <title>Cultivator Begins | NGO</title>
 </head>
 <body>
-    <div id="header" class=" flex-layout justify-space-between box-shadow items-center width-100 " style="background: var(--white-color); top: -120px; left: 0; z-index: 10; padding: 20px 40px; position: fixed;">
-        <img class=" width-100 " src="./assets/cultivator-begins-logo.jpeg" alt="NGO Logo" style="max-width: 200px;">
-        <div class=" flex-layout dis-none-res items-center justify-center col-gap-20 ">
-            <div class="pointer" onclick="scrollSpecific('home')">
+    <div id="header" class=" width-100 " style="top: -150px; left: 0; position: fixed; z-index: 10;">
+        <div id="header-child" class=" flex-layout justify-space-between box-shadow items-center " style="background: var(--white-color); padding: 20px 40px; z-index: 15;">
+            <img class=" width-100 margin-top-10 margin-bottom-10 " src="./assets/cultivator-begins-logo.jpeg" alt="NGO Logo" style="max-width: 200px;">
+            <div class=" flex-layout dis-none-res items-center justify-center col-gap-20 ">
+                <div class="pointer" onclick="scrollSpecific('home')">
+                    <h4>Home</h4>
+                </div>
+                <div class="pointer" onclick="scrollSpecific('tradition')">
+                    <h4>Our Tradition</h4>
+                </div>
+                <div class="pointer" onclick="scrollSpecific('mission')">
+                    <h4>Mission</h4>
+                </div>
+                <div class="pointer" onclick="scrollSpecific('vision')">
+                    <h4>Vision</h4>
+                </div>
+                <div class="pointer" onclick="scrollSpecific('events')">
+                    <h4>Drives</h4>
+                </div>
+                <div class="pointer" onclick="scrollSpecific('footer')">
+                    <span class="iconify" data-icon="carbon:phone-filled" style="width: 30px; height: 30px;"></span>
+                </div>
+            </div>
+            <div class=" container dis-none flex-layout-res ">
+                <input type="checkbox" id="checkbox4" class="checkbox4 visuallyHidden">
+                <label for="checkbox4">
+                    <div onclick="navbarTrigger()" class="hamburger hamburger4">
+                        <span class="bar bar1"></span>
+                        <span class="bar bar2"></span>
+                        <span class="bar bar3"></span>
+                        <span class="bar bar4"></span>
+                        <span class="bar bar5"></span>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div id="navbar" class=" posi-abs padding-40 flex-layout flex-dir-col width-100 items-center row-gap-20 box-shadow " style="top: -200px; left: 0; background: var(--white-color); z-index: -1;">
+            <div class="pointer" onclick="scrollSpecific('home'); navbarTrigger();">
                 <h4>Home</h4>
             </div>
-            <div class="pointer" onclick="scrollSpecific('tradition')">
+            <div class="pointer" onclick="scrollSpecific('tradition'); navbarTrigger();">
                 <h4>Our Tradition</h4>
             </div>
-            <div class="pointer" onclick="scrollSpecific('mission')">
+            <div class="pointer" onclick="scrollSpecific('mission'); navbarTrigger();">
                 <h4>Mission</h4>
             </div>
-            <div class="pointer" onclick="scrollSpecific('vision')">
+            <div class="pointer" onclick="scrollSpecific('vision'); navbarTrigger();">
                 <h4>Vision</h4>
             </div>
-            <div class="pointer" onclick="scrollSpecific('events')">
+            <div class="pointer" onclick="scrollSpecific('events'); navbarTrigger();">
                 <h4>Drives</h4>
             </div>
-            <div class="pointer" onclick="scrollSpecific('footer')">
-                <span class="iconify" data-icon="carbon:phone-filled" style="width: 30px; height: 30px;"></span>
+            <div class="pointer" onclick="scrollSpecific('footer'); navbarTrigger();">
+                <h4>Contact Us</h4>
             </div>
-            <!-- <a href="#home">
-                <h4>Home</h4>
-            </a>
-            <a href="#tradition">
-                <h4>Our Tradition</h4>
-            </a> -->
-            <!-- <a href="#mission">
-                <h4>Mission</h4>
-            </a>
-            <a href="#vision">
-                <h4>Vision</h4>
-            </a>
-            <a href="#events">
-                <h4>Drives</h4>
-            </a>
-            <a href="#contact">
-                <span class="iconify" data-icon="carbon:phone-filled" style="width: 30px; height: 30px;"></span>
-            </a> -->
         </div>
     </div>
     <div id="home" class=" flex-layout flex-dir-col-res-600 width-100 items-center justify-space-between " style="border-bottom: 1px solid lightgray; padding-bottom: 20px;">
@@ -79,8 +97,8 @@
             </a>
         </div>
     </div>
-    <div id="home-sec" class=" flex-layout justify-space-between items-center padding-20 ">
-        <img src="./assets/cultivator-begins-logo.jpeg" alt="NGO Logo" style="max-width: 300px; width: 100%;">
+    <div id="home-sec" class=" logo flex-layout justify-space-between items-center padding-20 ">
+        <img class=" margin-top-20 margin-bottom-20 " src="./assets/cultivator-begins-logo.jpeg" alt="NGO Logo" style="max-width: 250px; width: 100%;">
         <div class=" flex-layout dis-none-res items-center justify-center col-gap-20 ">
             <div class="pointer" onclick="scrollSpecific('home')">
                 <h4>Home</h4>
@@ -100,53 +118,24 @@
             <div class="pointer" onclick="scrollSpecific('footer')">
                 <span class="iconify" data-icon="carbon:phone-filled" style="width: 30px; height: 30px;"></span>
             </div>
-            <!-- <a href="#home">
-                <h4>Home</h4>
-            </a>
-            <a href="#tradition">
-                <h4>Our Tradition</h4>
-            </a>
-            <a href="#mission">
-                <h4>Mission</h4>
-            </a>
-            <a href="#vision">
-                <h4>Vision</h4>
-            </a>
-            <a href="#events">
-                <h4>Drives</h4>
-            </a>
-            <a href="#contact">
-                <span class="iconify" data-icon="carbon:phone-filled" style="width: 30px; height: 30px;"></span>
-            </a> -->
         </div>
     </div>
-    <div id="slider" class=" width-100 ">
-        <div class="slideshow-container width-100">
-            <div class="mySlides fade">
-              <img src="./assets/banner-1.jpg" style="max-width:100%">
-            </div>
-            <div class="mySlides fade">
-              <img src="./assets/banner-2.jpg" style="max-width:100%">
-            </div>
-            <div class="mySlides fade">
-              <img src="./assets/banner-3.jpg" style="max-width:100%">
-            </div>
-            <!-- <div class="mySlides fade">
-              <img src="./assets/banner-4.jpg" style="max-width:100%">
-            </div> -->
-            <div class="mySlides fade">
-              <img src="./assets/banner-5.jpg" style="max-width:100%">
-            </div>           
+    <!-- Add Slider Here -->
+    <section id="slider" class="splide" aria-label="Beautiful Images">
+        <div class="splide__track">
+              <ul class="splide__list">
+                  <li class="splide__slide">
+                      <img src="./assets/banner-1.jpg" alt="">
+                  </li>
+                  <li class="splide__slide">
+                      <img src="./assets/banner-2.jpg" alt="">
+                  </li>
+                  <li class="splide__slide">
+                      <img src="./assets/banner-3.jpg" alt="">
+                  </li>
+              </ul>
         </div>
-        <br>
-        <div style="text-align:center">
-            <span class="dot"></span> 
-            <span class="dot"></span> 
-            <span class="dot"></span> 
-            <!-- <span class="dot"></span>  -->
-            <span class="dot"></span> 
-        </div>            
-    </div>
+      </section>
     <div id="tradition" class=" flex-layout flex-dir-col-res justify-space-between padding-40 row-gap-40 ">
         <div style="flex: 0 0 57%;">
             <h1 class=" align-center-res dark-green-color bold-text ">Our Tradition</h1>
@@ -218,8 +207,46 @@
 
                 <h4 class=" dark-green-color bold-text ">Plantation Drive</h4>
                 <h4 class=" align-justify ">In our mission we have focused less on the numbers but more on the sustainability of trees. In our path we faced many challenges but the burning desire didn’t allow us to stop and we keep on moving. By now we have planted more than 110+ trees. Here are few glimpses of our crazy people and moments of plant caring.</h4>
-                <div class=" view-more-btn ">
+                <div onclick="popUpOpen('drive1')" class=" view-more-btn ">
                     <h5 class=" grey-color bold-text margin-top-10 " style="border: 1px solid var(--primary-color); padding: 15px 25px; border-radius: 5px;">View More</h5>
+                </div>
+                <div id="drive1" class=" flex-layout dis-none items-center justify-center width-100 " style="position: fixed; height: 100vh; background: rgba(0, 0, 0, 0.5); top: 0; left: 0;">
+                    <div class=" padding-40 flex-layout flex-dir-col pop-up-con ">
+                        <div class=" flex-layout items-center justify-space-between width-100 " style="border-bottom: 1px solid lightgray; padding-bottom: 20px; position: sticky; top: 0; left: 0; background: var(--white-color);">
+                            <h3 class=" bold-text green-color ">Plantation Drive</h3>
+                            <div class=" pointer " onclick="popUpClose('drive1')">
+                                <span class="iconify" data-icon="akar-icons:cross" data-width="25" data-height="25"></span>
+                            </div>
+                        </div>
+                        <h5 class=" align-justify width-100 margin-top-20 margin-bottom-20 ">
+                            Well all it has been started without any thought of creating it a mission by simply planting these three plants at the river bank of Sabarmati near Dholeshvar mahadev mandir , Gandhinagar.
+                            <br/>
+                            <br/>
+                            Nature has planned something different for us and after the cleaning drive at river on the next Sunday we have started planting trees and never looked back then.
+                            <br/>
+                            <br/>
+                            And our friends from outside of Gandhinagar have joined us in our mission. Such as chhota udepur , vadodara and benglore.
+                            <br/>
+                            <br/>
+                            In our mission we have focused less on the numbers but more on the sustainability of trees. In our path we faced many challenges but the burning desire didn’t allow us to stop and we keep on moving. By now we have planted more than 110+ trees. Here are few glimpses of our crazy people and moments of plant caring.
+                        </h5>
+                        <!-- Add Slider Here -->
+                        <section id="slider-1" class="splide">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <img src="./assets/banner-1.jpg" alt="">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="./assets/banner-2.jpg" alt="">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="./assets/banner-3.jpg" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
                 </div>
             </div>
             <div class=" flex-layout flex-dir-col row-gap-10 items-center event-card ">
@@ -252,10 +279,10 @@
         </div>
         <div style="flex: 0 0 25%;">
             <h3 class=" bold-text grey-color margin-bottom-10 ">Useful Links</h3>
-            <a class=" flex-layout width-100 justify-space-between " style="padding: 15px 10px; border-bottom: 1px solid lightgray;">
+            <div onclick="scrollSpecific('tradition')" class=" flex-layout width-100 justify-space-between pointer " style="padding: 15px 10px; border-bottom: 1px solid lightgray;">
                 <h4>About Us</h4>
                 <span class="iconify" data-icon="ep:arrow-right-bold" style="width: 15px; height: 15px;"></span>
-            </a>
+            </div>
             <a class=" flex-layout width-100 justify-space-between " style="padding: 15px 10px; border-bottom: 1px solid lightgray;">
                 <h4>Become Volunteer</h4>
                 <span class="iconify" data-icon="ep:arrow-right-bold" style="width: 15px; height: 15px;"></span>
@@ -299,74 +326,29 @@
         </div>
     </div>
 
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <script src="./index.js"></script>
+    <script src="./splide/splide-4.0.1/dist/js/splide.min.js"></script>
     <script>
-        let slideIndex = 0;
-        showSlides();
-        
-        function showSlides() {
-          let i;
-          let slides = document.getElementsByClassName("mySlides");
-          let dots = document.getElementsByClassName("dot");
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-          }
-          slideIndex++;
-          if (slideIndex > slides.length) {slideIndex = 1}    
-          for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += " active";
-          setTimeout(showSlides, 3000);
-        }
-    </script>
-    <script>
-        let home = document.querySelector('#home');
-        let homeSec = document.querySelector('#home-sec');
-        let slider = document.querySelector('#slider');
-        let tradition = document.querySelector("#tradition");
-        let mission = document.querySelector('#mission');
-        let vision = document.querySelector('#vision');
-        let events = document.querySelector('#events');
-        let footer = 330;
-        let footerSec = document.querySelector('#footer-sec');
+        var splide0 = new Splide( '#slider', {
+            type    : 'loop',
+            perPage : 1,
+            autoplay: true,
+            arrows: false,
+        } );
 
-        var homeH = home.offsetHeight;
-        // var sliderH = homeH + slider.offsetHeight;
-        var traditionH = homeH + tradition.offsetHeight + 230;
-        var missionH = traditionH + mission.offsetHeight + 10;
-        var visionH = missionH + vision.offsetHeight + 30;
-        var eventsH = visionH + events.offsetHeight - 300;
-        var footerH = eventsH + footer + 100;
-        var footerSecH = footerH + footerSec.offsetHeight;
+        splide0.mount();
 
-        function scrollSpecific(id) {
-            if (id == 'home') {
-                window.scrollTo(0, (homeH - 50));
-            } else if ( id == 'tradition') {
-                window.scrollTo(0, traditionH);
-            } else if ( id == 'mission') {
-                window.scrollTo(0, missionH);
-            } else if ( id == 'vision'){
-                window.scrollTo(0, visionH);
-            } else if ( id == 'events') {
-                window.scrollTo(0, eventsH);
-            } else if ( id == 'footer') {
-                window.scrollTo(0, footerH);
-            }
-        }
+        var splide1 = new Splide( '#slider-1', {
+            type    : 'loop',
+            perPage : 1,
+            autoplay: true,
+            arrows: false,
+        } );
 
-        window.addEventListener('scroll', headerPop);
-        function headerPop() {
-            if (window.pageYOffset > 200) {
-                document.getElementById("header").classList.remove("anime-up");
-                document.getElementById("header").classList.add("anime-down");
-            } else {
-                document.getElementById("header").classList.remove("anime-down")
-                document.getElementById("header").classList.add("anime-up")
-            }
-        }
+        splide1.mount();
+
     </script>        
 </body>
 </html>
